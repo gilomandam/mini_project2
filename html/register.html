@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PizzaHub</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <!---Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!---fONT AWESOME--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!--CARUSEL-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+<style>
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../asset/img/bg-piz.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #form {
+    background-color: #fff;
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand p-0">
+        <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bap.html">Book a Party</a>
+          </li>
+        </ul>
+        <div class="search">
+          <i class="fa fa-search" id="onSearch"></i>
+        </div>
+        <i class="fa fa-shopping-cart" id="shop-cart"></i>
+        <div class="d-flex fadeOut" role="login">
+          <button type="button" id="myButton" class="btn text-white float-left m-3"
+            style=" background-color: #a70b25;">Login</button>
+        </div>
+      </div>
+  </nav>
+  <section class="login-form vh-170">
+
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form id="form">
+            <div class="form-outline mb-4">
+              <h1 class="text-center">Create a Cheekie's Account</h1>
+              <p class="text-center">Already have an account? <a href="login.html" class="text-danger"
+                  style="text-decoration: none ;">Login</a></p>
+
+            </div>
+
+            <form class="row g-3 requires-validation" novalidate>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label for="name">First name</label>
+                    <input type="text" class="form-control shadow-none" placeholder="Enter your first name"
+                      style="font-weight: 100;" id="name" required />
+                    <div class="valid-feedback">Username field is valid!</div>
+                    <div class="invalid-feedback">Username field cannot be blank!</div>
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control shadow-none" placeholder="Enter your last name"
+                      style="font-weight: 100;" required />
+                  </div>
+
+                  <div class="col-md-12 ps-0 px-0 mb-3">
+                    <label for="pnum">Phone Number</label>
+                    <input type="number" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-12 p-0 mb-3">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control shadow-none" placeholder="Enter your email address"
+                      style="font-weight: 100;" required></input>
+                    <div class="valid-feedback">Email field is valid!</div>
+                    <div class="invalid-feedback">Email field cannot be blank!</div>
+                  </div>
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label for="pass">Password</label>
+                    <input type="password" class="form-control shadow-none" placeholder="Enter your password"
+                      style="font-weight: 100;" id="password" required />
+                    <div class="valid-feedback">Password field is valid!</div>
+                    <div class="invalid-feedback">Password field cannot be blank!</div>
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label for="cpass">Confirm Password</label>
+                    <input type="password" class="form-control shadow-none" placeholder="Confirm your password"
+                      style="font-weight: 100;" id="password" required />
+                    <div class="valid-feedback">Password field is valid!</div>
+                    <div class="invalid-feedback">Password field cannot be blank!</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-check d-flex justify-content-center mb-5  ps-5 ">
+                <input class="form-check-input me-2 " type="checkbox" value="" id="form2Example3c" />
+                <label class="form-check-label " for="form2Example3">
+                  By signing up you agree to our <a href="#!" class="text-danger" style="text-decoration: none ;">Terms
+                    and Conditions </a> and
+                  <a href="#!" class="text-danger" style="text-decoration: none ;">Privacy Policy</a>
+                </label>
+                <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+              </div>
+
+              <div class=" d-flex justify-content-center  mx-4 mb-3 mb-lg-4">
+                <button type="submit" class="btn btn-block btn-lg mb-4 w-75 mx-5 btn-danger" id="btn-submit"
+                  value="Login">Create account</button>
+              </div>
+            </form>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-fluid mt-5 pt-5" id="footer">
+    <div class="row g-5">
+      <div class="col-lg-3 p-6">
+        <div class="header">
+          <div class="logo">
+            <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+          </div>
+        </div>
+        <p class="text-dark mb-5 ">Lucid Homes is a condo rental business aimed to provide the coziest stay for
+          couples,
+          friends, family, or even single people without having to travel miles away from the city.
+        </p>
+      </div>
+
+      <div class="col-lg-3 p-6">
+        <h5 class="mb-3 text-dark "> Quick Links</h5>
+        <a href="index.html" class="d-inline-block  mb-2  text-decoration-none" id="footer-link">Home</a><br>
+        <a href="menu.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Menu</a><br>
+        <a href="aboutus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">About</a><br>
+        <a href="contactus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Contact
+          Us</a><br>
+        <a href="bap.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Book A
+          Party</a><br>
+      </div>
+
+
+
+      <div class="  col-lg-3 p-6">
+        <h5 class="mb-3 text-dark ">Get in Touch</h5>
+        <p class="mb-2 text-dark "> <i class="bi bi-geo-alt"></i>123 Street, CDO</p>
+
+        <p class="mb-2 text-dark "><i class="bi bi-telephone"></i>+63123-456-789</p>
+        <p class="mb-2 text-dark "><i class="bi bi-envelope"></i> <span>contact@cheekies.com</span> </p>
+
+
+        <div class="flex pt-2">
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-facebook me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"> <i class="bi bi-twitter me-1 "></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-youtube me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-linkedin me-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-1 text-dark">Opening hours</h5>
+        <table class="table" style="border-color: #666;">
+          <tbody>
+            <tr>
+              <td>Mon - Fri:</td>
+              <td>8am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Sat - Sun:</td>
+              <td>8am - 1am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+    <div class="footer-bg">
+      <h6 class=" text-center  text-white p-3 m-0">Copyright 2023| All Right Reserved</h6>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict'
+      const forms = document.querySelectorAll('.requires-validation')
+      Array.from(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

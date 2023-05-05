@@ -1,0 +1,220 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+
+  <title> Bootstrap Gallery</title>
+</head>
+<style>
+  body {
+    background-color: #434c50;
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 40px 0;
+  }
+
+  .container.gallery-container {
+    background-color: #fff;
+    color: #35373a;
+    min-height: 100vh;
+    padding: 30px 50px;
+  }
+
+  .gallery-container h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .gallery-container p.page-description {
+    text-align: center;
+    margin: 25px auto;
+    font-size: 18px;
+    color: #999;
+  }
+
+  .tz-gallery {
+    padding: 40px;
+  }
+
+  /* Override bootstrap column paddings */
+  .tz-gallery .row>div {
+    padding: 2px;
+  }
+
+  .tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+  }
+
+
+  .tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(46, 132, 206, 0.7);
+    content: '';
+    transition: 0.4s;
+  }
+
+  .tz-gallery .lightbox:hover:after,
+  .tz-gallery .lightbox:hover:before {
+    opacity: 1;
+  }
+
+  .baguetteBox-button {
+    background-color: transparent !important;
+  }
+
+  @media(max-width: 768px) {
+    body {
+      padding: 0;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="container gallery-container">
+
+    <h1>Gallery</h1>
+
+    <div class="tz-gallery">
+
+      <div class="row">
+
+        <div class="col-sm-12 col-md-4">
+          <a class="lightbox" href="../asset/img/bg-pizza-2.png">
+            <img src="../asset/img/bg-pizza.png" alt="Bridge">
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a class="lightbox" href="../asset/img/bg-pizza-2.png">
+            <img src="../asset/img/bg-pizza-2.png" alt="Park">
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a class="lightbox" href="../asset/img/bg-pizza-2.png">
+            <img src="../asset/img/bg-pizza-2.png" alt="Tunnel">
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-8">
+          <a class="lightbox" href="../asset/img/bg-pizza-2.png">
+            <img src="../asset/img/bg-pizza-2.png" alt="Traffic">
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a class="lightbox" href="../asset/img/bg-pizza-2.png">
+            <img src="../asset/img/bg-pizza-2.png" alt="Coast">
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a class="lightbox" href="../asset/img/bg-pizza-2.png">
+            <img src="../asset/img/bg-pizza-2.png" alt="Rails">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="container-fluid mt-5 pt-5" id="footer">
+    <div class="row g-5">
+      <div class="col-lg-3 p-6">
+        <div class="header">
+          <div class="logo">
+            <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+          </div>
+        </div>
+        <p class="text-dark mb-5 ">Lucid Homes is a condo rental business aimed to provide the coziest stay for
+          couples,
+          friends, family, or even single people without having to travel miles away from the city.
+        </p>
+      </div>
+
+      <div class="col-lg-3 p-6">
+        <h5 class="mb-3 text-dark "> Quick Links</h5>
+        <a href="index.html" class="d-inline-block  mb-2  text-decoration-none" id="footer-link">Home</a><br>
+        <a href="menu.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Menu</a><br>
+        <a href="aboutus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">About</a><br>
+        <a href="contactus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Contact
+          Us</a><br>
+        <a href="bap.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Book A
+          Party</a><br>
+      </div>
+
+
+
+      <div class="  col-lg-3 p-6">
+        <h5 class="mb-3 text-dark ">Get in Touch</h5>
+        <p class="mb-2 text-dark "> <i class="bi bi-geo-alt"></i>123 Street, CDO</p>
+
+        <p class="mb-2 text-dark "><i class="bi bi-telephone"></i>+63123-456-789</p>
+        <p class="mb-2 text-dark "><i class="bi bi-envelope"></i> <span>contact@cheekies.com</span> </p>
+
+
+        <div class="flex pt-2">
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-facebook me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"> <i class="bi bi-twitter me-1 "></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-youtube me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-linkedin me-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-1 text-dark">Opening hours</h5>
+        <table class="table" style="border-color: #666;">
+          <tbody>
+            <tr>
+              <td>Mon - Fri:</td>
+              <td>8am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Sat - Sun:</td>
+              <td>8am - 1am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+    <div class="footer-bg">
+      <h6 class=" text-center  text-white p-3 m-0">Copyright 2023| All Right Reserved</h6>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+    baguetteBox.run('.tz-gallery');
+  </script>
+</body>
+
+</html>

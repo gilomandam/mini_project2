@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheekies</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <!---Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!---fONT AWESOME--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!--CARUSEL-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+<style>
+  #bg-container {
+    height: 20px;
+  }
+</style>
+
+<body>
+
+
+  <!---Navbar-->
+  <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand p-0">
+        <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bap.html">Book a Party</a>
+          </li>
+        </ul>
+        <div class="search">
+          <i class="fa fa-search" id="onSearch"></i>
+        </div>
+        <i class="fa fa-shopping-cart" id="shop-cart"></i>
+        <div class="d-flex fadeOut" role="login">
+          <button type="button" id="myButton" class="btn text-white float-left m-3"
+            style=" background-color: #a70b25;">Login</button>
+        </div>
+      </div>
+  </nav>
+  <!--Navbar End-->
+
+  <!-- Carousel Slider -->
+  <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item text-center bg-cover  active slide-1">
+        <div class="container h-100 d-flex align-items-center justify-content-center" id="bg-container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+              <section class="cd-intro">
+                <h1 class="cd-headline rotate1 display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal
+                </h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam
+                  dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                  stet lorem sit clita duo justo magna dolore erat amet</p>
+                <a href="" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">ORDER</a>
+
+              </section>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+              <img class="img-fluid" src="../asset/img/bg-pizza.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item text-center bg-cover  slide-2">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center text-lg-start">
+              <section class="cd-intro">
+                <h1 class="cd-headline rotate1 display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal
+                </h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam
+                  dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                  stet lorem sit clita duo justo magna dolore erat amet</p>
+                <a href="" class="btn btn-danger py-sm-3 px-sm-5 me-3 animated slideInLeft">ORDER</a>
+
+              </section>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+              <img class="img-fluid" src="../asset/img/bg-pizza-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Carousel Slider End-->
+
+
+  <!-- Menu -->
+
+  <section id="menu" class="menu-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 intro-text">
+          <h1>Feautured Products</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+            type="button" role="tab" aria-controls="pills-all" aria-selected="true">All Items</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-pizza-tab" data-bs-toggle="pill" data-bs-target="#pills-pizza"
+            type="button" role="tab" aria-controls="pills-pizza" aria-selected="true">Pizza</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-drinks-tab" data-bs-toggle="pill" data-bs-target="#pills-drinks"
+            type="button" role="tab" aria-controls="pills-drinks" aria-selected="true">Drinks</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-burger-tab" data-bs-toggle="pill" data-bs-target="#pills-burger"
+            type="button" role="tab" aria-controls="pills-burger" aria-selected="true">Burger</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-combos-tab" data-bs-toggle="pill" data-bs-target="#pills-combos"
+            type="button" role="tab" aria-controls="pills-combos" aria-selected="true">Combos</button>
+        </li>
+      </ul>
+      <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"
+            tabindex="0">
+            <div class="container-menu">
+              <div class="box-container">
+                <div class="row gy-4">
+                  <div class="content col-lg-3 col-sm-6">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy31</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2" onclick="orderFunction()">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content col-lg-3 col-sm-6">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy2</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content col-lg-3 col-sm-6">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy3</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content col-lg-3 col-sm-6">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy4</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 blogBox moreBox">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy5</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 blogBox moreBox ">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy6</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 blogBox moreBox ">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy7</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 blogBox moreBox">
+                    <div class="menu-item bg-white shadow-on-hover">
+                      <img src="../asset/img/bg-pizza.png" alt="">
+                      <div class="menu-item-content p-4">
+                        <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                        <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                        <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="tab-pane fade show" id="pills-pizza" role="tabpanel" aria-labelledby="pills-pizza-tab"
+            tabindex="0">
+            <div class="row gy-4">
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img
+                    src="../asset/img/pizza-with-roast-beef-artichokes-jalapenos-chili-mozzarella-pesto-neapolitan-round-pizza.png"
+                    alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Pizza Roast Beef Mozzarella Pesto</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/pizza1.jpg" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/pizza2.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/pizza3.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/pizza-with-sausage-meat-cheese-basil-olives.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Pizza Sausage Meat cheese basil olives</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/seafood-pizza-wood-tray.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Seafood Pizza</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/pizza3.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/italian-food-wood-slice-pepperoni-gourmet.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian pepperoni gourmet</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade show" id="pills-drinks" role="tabpanel" aria-labelledby="pills-drinks-tab"
+            tabindex="0">
+            <section class="drinks">
+              <div class="row gy-4">
+                <div class="col-lg-3 col-sm-6">
+                  <div class="menu-item bg-white shadow-on-hover">
+                    <img src="../asset/img/pizza4.png" alt="">
+                    <div class="menu-item-content p-4">
+                      <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                      <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                      <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="menu-item bg-white shadow-on-hover">
+                    <img src="../asset/img/bg-pizza.png" alt="">
+                    <div class="menu-item-content p-4">
+                      <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                      <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                      <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="menu-item bg-white shadow-on-hover">
+                    <img src="../asset/img/bg-pizza.png" alt="">
+                    <div class="menu-item-content p-4">
+                      <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                      <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                      <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="menu-item bg-white shadow-on-hover">
+                    <img src="../asset/img/bg-pizza.png" alt="">
+                    <div class="menu-item-content p-4">
+                      <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                      <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                      <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tab-pane fade show" id="pills-burger" role="tabpanel" aria-labelledby="pills-burger-tab"
+            tabindex="0">
+            <div class="row gy-4">
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/burger1.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Beef Burger</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>533.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/burger5.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Beef Burger</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>340.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/burger3.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Beef Burger</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>299.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/burger6.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Beef Burger</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>133.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img
+                    src="../asset/img/xahamburger-served-with-mozzarella-cheese-onion-mayonnaise-cheddar-cheese-fries.png"
+                    alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Hamburger mozzarella cheese onion </h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>133.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade show" id="pills-combos" role="tabpanel" aria-labelledby="pills-combos-tab"
+            tabindex="0">
+            <div class="row gy-4">
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/bg-pizza.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                <div class="menu-item bg-white shadow-on-hover">
+                  <img src="../asset/img/bg-pizza.png" alt="">
+                  <div class="menu-item-content p-4">
+                    <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+                    <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+                    <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- menu section ends -->
+  <div class="tab-pane fade" id="menu-dinner">
+
+    <div class="tab-header text-center">
+      <p>Menu</p>
+      <h3>Dinner</h3>
+    </div>
+
+    <div class="row gy-5">
+
+      <div class="col-lg-4 menu-item">
+        <a href="assets/img/menu/menu-item-1.png" class="glightbox">
+          <img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt="">
+        </a>
+        <h4>Magnam Tiste</h4>
+        <p class="ingredients">
+          Lorem, deren, trataro, filede, nerada
+        </p>
+        <p class="price">
+          $5.95
+        </p>
+      </div>
+
+      <!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item">
+        <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png"
+            class="menu-img img-fluid" alt=""></a>
+        <h4>Aut Luia</h4>
+        <p class="ingredients">
+          Lorem, deren, trataro, filede, nerada
+        </p>
+        <p class="price">
+          $14.95
+        </p>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item">
+        <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png"
+            class="menu-img img-fluid" alt=""></a>
+        <h4>Est Eligendi</h4>
+        <p class="ingredients">
+          Lorem, deren, trataro, filede, nerada
+        </p>
+        <p class="price">
+          $8.95
+        </p>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item">
+        <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png"
+            class="menu-img img-fluid" alt=""></a>
+        <h4>Eos Luibusdam</h4>
+        <p class="ingredients">
+          Lorem, deren, trataro, filede, nerada
+        </p>
+        <p class="price">
+          $12.95
+        </p>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item">
+        <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png"
+            class="menu-img img-fluid" alt=""></a>
+        <h4>Eos Luibusdam</h4>
+        <p class="ingredients">
+          Lorem, deren, trataro, filede, nerada
+        </p>
+        <p class="price">
+          $12.95
+        </p>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item">
+        <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png"
+            class="menu-img img-fluid" alt=""></a>
+        <h4>Laboriosam Direva</h4>
+        <p class="ingredients">
+          Lorem, deren, trataro, filede, nerada
+        </p>
+        <p class="price">
+          $9.95
+        </p>
+      </div><!-- Menu Item -->
+
+    </div>
+  </div><!-- End Dinner Menu Content -->
+
+  </div>
+
+  </div>
+  </section><!-- End Menu Section -->
+
+  <!-- footer section  -->
+  <div class="container-fluid mt-5 pt-5" id="footer">
+    <div class="row g-5">
+      <div class="col-lg-3 p-6">
+        <div class="header">
+          <div class="logo">
+            <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+          </div>
+        </div>
+        <p class="text-dark mb-5 ">Lucid Homes is a condo rental business aimed to provide the coziest stay for
+          couples,
+          friends, family, or even single people without having to travel miles away from the city.
+        </p>
+      </div>
+
+      <div class="col-lg-3 p-6">
+        <h5 class="mb-3 text-dark "> Quick Links</h5>
+        <a href="index.html" class="d-inline-block  mb-2  text-decoration-none" id="footer-link">Home</a><br>
+        <a href="menu.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Menu</a><br>
+        <a href="aboutus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">About Us</a><br>
+        <a href="contactus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Contact
+          Us</a><br>
+        <a href="bap.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Book A
+          Party</a><br>
+      </div>
+
+
+
+      <div class="  col-lg-3 p-6">
+        <h5 class="mb-3 text-dark ">Get in Touch</h5>
+        <p class="mb-2 text-dark "> <i class="bi bi-geo-alt"></i>123 Street, CDO</p>
+
+        <p class="mb-2 text-dark "><i class="bi bi-telephone"></i>+63123-456-789</p>
+        <p class="mb-2 text-dark "><i class="bi bi-envelope"></i> <span>contact@cheekies.com</span> </p>
+
+
+        <div class="flex pt-2">
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-facebook me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"> <i class="bi bi-twitter me-1 "></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-youtube me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-linkedin me-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-1 text-dark">Opening hours</h5>
+        <table class="table" style="border-color: #666;">
+          <tbody>
+            <tr>
+              <td>Mon - Fri:</td>
+              <td>8am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Sat - Sun:</td>
+              <td>8am - 1am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+    <div class="footer-bg">
+      <h6 class=" text-center  text-white p-3 m-0">Copyright 2023| All Right Reserved</h6>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+
+  <!---CAROSEL-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+
+</html>

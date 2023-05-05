@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheekies</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <!---Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!---fONT AWESOME--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!--CARUSEL-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row" id="load-more-row">
+      <!-- Load more items will be added here -->
+      <div class="row gy-4">
+        <div class="content col-lg-3 col-sm-6" id="load-more-row">
+          <div class="menu-item bg-white shadow-on-hover">
+            <img src="../asset/img/bg-pizza.png" alt="">
+            <div class="menu-item-content p-4">
+              <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy31</h2>
+              <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+              <button class="btn btn-danger px-5 p-2 m-2" onclick="orderFunction()">ORDER</button>
+            </div>
+          </div>
+        </div>
+        <div class="content col-lg-3 col-sm-6" id="load-more-row">
+          <div class="menu-item bg-white shadow-on-hover">
+            <img src="../asset/img/bg-pizza.png" alt="">
+            <div class="menu-item-content p-4">
+              <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy2</h2>
+              <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+              <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+            </div>
+          </div>
+        </div>
+        <div class="content col-lg-3 col-sm-6" id="load-more-row">
+          <div class="menu-item bg-white shadow-on-hover">
+            <img src="../asset/img/bg-pizza.png" alt="">
+            <div class="menu-item-content p-4">
+              <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy3</h2>
+              <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+              <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-lg-3 col-sm-6 blogBox moreBox">
+          <div class="menu-item bg-white shadow-on-hover">
+            <img src="../asset/img/bg-pizza.png" alt="">
+            <div class="menu-item-content p-4">
+              <h2 class="meu-title">Italian Pizza Barbeque Flavor Spicy8</h2>
+              <span class="price"><span style="font-size: 23px;">₱</span>1,233.00</span>
+              <button class="btn btn-danger px-5 p-2 m-2">ORDER</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <button id="load-more-btn" class="btn btn-primary">Load More</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script>
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreRow = document.getElementById('load-more-row');
+
+    let itemsToShow = 8; // Number of items to show on page load
+    let itemsLoaded = 4; // Number of items already loaded
+
+    // Add click event listener to the "Load More" button
+    loadMoreBtn.addEventListener('click', () => {
+      // Calculate the number of items to show
+      itemsToShow += 3;
+
+      // Loop through all items and show/hide them based on the itemsToShow value
+      for (let i = 0; i < loadMoreRow.children.length; i++) {
+        if (i < itemsToShow) {
+          loadMoreRow.children[i].style.display = 'block';
+          itemsLoaded++;
+        } else {
+          loadMoreRow.children[i].style.display = 'none';
+        }
+      }
+
+      // Disable the button if all items are shown
+      if (itemsLoaded === loadMoreRow.children.length) {
+        loadMoreBtn.disabled = true;
+      }
+    });
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <!---CAROSEL-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PizzaHub</title>
+  <link rel="stylesheet" href="../css/index.css">
+
+  <!---Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!---fONT AWESOME--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!--CARUSEL-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+<style>
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../asset/img/bg-piz.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #form {
+    width: 500px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 60px;
+  }
+
+
+
+  #form button {
+    padding: 10px;
+    margin-top: 0px;
+    width: 100%;
+    color: white;
+    background-color: #a70b25;
+    border: none;
+    border-radius: 4px;
+  }
+
+  #form button:hover {
+    background-color: #401118;
+  }
+
+  .input-control {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .input-control input:focus {
+    outline: 0;
+  }
+
+  .input-control.success input {
+    border-color: #09c372;
+  }
+
+  .input-control.error input {
+    border-color: #ff3860;
+  }
+
+  .input-control .error {
+    color: #ff3860;
+    font-size: 12px;
+    height: 13px;
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+    <div class="container " style="border-radius: 3px;">
+      <a href="index.html" class="navbar-brand p-0">
+        <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">About</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bap.html">Book a Party</a>
+          </li>
+        </ul>
+        <div class="search">
+          <i class="fa fa-search" id="onSearch"></i>
+        </div>
+        <i class="fa fa-shopping-cart" id="shop-cart"></i>
+        <div class="d-flex fadeOut" role="login">
+          <button type="button" id="myButton" class="btn text-white float-left m-3"
+            style=" background-color: #a70b25;">Login</button>
+        </div>
+      </div>
+  </nav>
+
+
+
+  <div class="container">
+    <form id="form" action="/">
+      <div class="form-outline mb-4">
+        <h1 class="text-center">Login to Cheekie's</h1>
+        <p class="text-center">New user? <a href="register.html" class="text-danger"
+            style="text-decoration: none ;">Create an
+            account</a></p>
+      </div>
+
+      <div class="input-control">
+        <label for="email" class="form-label fw-bold">Email</label>
+        <input id="email" name="email" type="text">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="password" class="form-label fw-bold">Password</label>
+        <input id="password" name="password" type="password">
+        <div class="error mb-3"></div>
+      </div>
+
+      <div class="d-flex justify-content-around align-items-center mb-4">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+          <label class="form-check-label fw-bold"> Keep me logged in </label>
+        </div>
+        <a href="#!" class="text-danger fw-bold" style="text-decoration: none ;">Forgot password?</a>
+      </div>
+      <button type="submit" style="font-size: large;">Login</button>
+      <div class="col  text-center my-4">
+        <p class="text-center mx-3 mb-0 text-muted">Login with</p>
+      </div>
+      <div class="container">
+        <div class="col-md-12 text-center mb-2">
+          <button type="button" class="btn btn-primary btn-lg mb-2 px-5" style="background-color: #1029cb"><i
+              class="fab fa-facebook me-2"></i>Continue with
+            Facebook</button>
+          <button type="button" class="btn  btn-lg px-5 text-light" id="btn-g" style="background-color: #908c8c"><i
+              class="fab fa-google me-2"></i>Continue with
+            Google</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="container-fluid mt-5 pt-5" id="footer">
+    <div class="row g-5">
+      <div class="col-lg-3 p-6">
+        <div class="header">
+          <div class="logo">
+            <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+          </div>
+        </div>
+        <p class="text-dark mb-5 ">Lucid Homes is a condo rental business aimed to provide the coziest stay for
+          couples,
+          friends, family, or even single people without having to travel miles away from the city.
+        </p>
+      </div>
+
+      <div class="col-lg-3 p-6">
+        <h5 class="mb-3 text-dark "> Quick Links</h5>
+        <a href="index.html" class="d-inline-block  mb-2  text-decoration-none" id="footer-link">Home</a><br>
+        <a href="menu.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Menu</a><br>
+        <a href="aboutus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">About</a><br>
+        <a href="contactus.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Contact
+          Us</a><br>
+        <a href="bap.html" class="d-inline-block mb-2   text-decoration-none" id="footer-link">Book A
+          Party</a><br>
+      </div>
+
+
+
+      <div class="  col-lg-3 p-6">
+        <h5 class="mb-3 text-dark ">Get in Touch</h5>
+        <p class="mb-2 text-dark "> <i class="bi bi-geo-alt"></i>123 Street, CDO</p>
+
+        <p class="mb-2 text-dark "><i class="bi bi-telephone"></i>+63123-456-789</p>
+        <p class="mb-2 text-dark "><i class="bi bi-envelope"></i> <span>contact@cheekies.com</span> </p>
+
+
+        <div class="flex pt-2">
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-facebook me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"> <i class="bi bi-twitter me-1 "></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-youtube me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-linkedin me-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-1 text-dark">Opening hours</h5>
+        <table class="table" style="border-color: #666;">
+          <tbody>
+            <tr>
+              <td>Mon - Fri:</td>
+              <td>8am - 9pm</td>
+            </tr>
+            <tr>
+              <td>Sat - Sun:</td>
+              <td>8am - 1am</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+    <div class="footer-bg">
+      <h6 class=" text-center  text-white p-3 m-0">Copyright 2023| All Right Reserved</h6>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form');
+
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      validateInputs();
+    });
+
+    const setError = (element, message) => {
+      const inputControl = element.parentElement;
+      const errorDisplay = inputControl.querySelector('.error');
+
+      errorDisplay.innerText = message;
+      inputControl.classList.add('error');
+      inputControl.classList.remove('success')
+    }
+
+    const setSuccess = element => {
+      const inputControl = element.parentElement;
+      const errorDisplay = inputControl.querySelector('.error');
+
+      errorDisplay.innerText = '';
+      inputControl.classList.add('success');
+      inputControl.classList.remove('error');
+    };
+
+    const isValidEmail = email => {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+    }
+
+    const validateInputs = () => {
+
+      const emailValue = email.value.trim();
+      const passwordValue = password.value.trim();
+
+
+
+      if (emailValue === '') {
+        setError(email, 'Email is required');
+      } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+      } else {
+        setSuccess(email);
+      }
+
+      if (passwordValue === '') {
+        setError(password, 'Password is required');
+      } else if (passwordValue.length < 8) {
+        setError(password, 'Password must be at least 8 character.')
+      } else {
+        setSuccess(password);
+      }
+
+
+
+    };
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

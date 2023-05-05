@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Here</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <!---Boostrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!---fONT AWESOME--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!--CARUSEL-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+</head>
+<style>
+  #bg-search {
+    background: linear-gradient(rgba(66, 66, 66, 0.9), rgba(53, 53, 54, 0.9)), url(../asset/img/bg-bap.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px -4px rgba(0, 0, 0, 0.75);
+  }
+
+  .card:hover {
+    box-shadow: 0px 0px 51px -36px rgba(0, 0, 0, 1);
+  }
+</style>
+
+<body>
+  <!---Navbar-->
+  <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+    <div class="container">
+      <a href="#" class="navbar-brand p-0">
+        <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="aboutus.html" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="team.html">Team</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bap.html">Book a Party</a>
+          </li>
+        </ul>
+        <div class="search">
+          <i class="fa fa-search" id="onSearch"></i>
+        </div>
+        <i class="fa fa-shopping-cart" id="shop-cart"></i>
+        <div class="d-flex fadeOut" role="login">
+          <button type="button" id="myButton" class="btn text-white float-left m-3"
+            style=" background-color: #a70b25;">Login</button>
+        </div>
+      </div>
+  </nav>
+  <section id="bg-search">
+    <h2 class="text-center mt-2">Search Here</h2>
+    <input type="text" class="form-control mt-3 mx-auto" id="myinput" placeholder="Search Here" style="width: 40%;">
+    <div class="container">
+      <h3 class="text-danger mt-5 text-center" id="para" style="display:none;">Not Found</h3>
+      <div class="row mt-3" id="card"></div>
+    </div>
+  </section>
+  <div class="container-fluid mt-5 pt-5" id="footer">
+    <div class="row g-5">
+      <div class="col-lg-3 p-6">
+        <div class="header">
+          <div class="logo">
+            <h1 class="text m-0"><i class="fa fa-pizza-slice me-3"></i>Cheekies</h1>
+          </div>
+        </div>
+        <p class="text-dark mb-5 ">Lucid Homes is a condo rental business aimed to provide the coziest stay for
+          couples,
+          friends, family, or even single people without having to travel miles away from the city.
+        </p>
+      </div>
+
+      <div class="col-lg-3 p-6">
+        <h5 class="mb-3 text-dark "> Quick Links</h5>
+        <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
+        <a href="#" class="d-inline-block mb-2 text-dark  text-decoration-none">Menu</a><br>
+        <a href="#" class="d-inline-block mb-2 text-dark  text-decoration-none">Promos</a><br>
+        <a href="#" class="d-inline-block mb-2 text-dark  text-decoration-none">Features</a><br>
+        <a href="#" class="d-inline-block mb-2 text-dark  text-decoration-none">About</a><br>
+        <a href="#" class="d-inline-block mb-2 text-dark  text-decoration-none">Contact US</a>
+      </div>
+
+
+
+      <div class="  col-lg-3 p-6">
+        <h5 class="mb-3 text-dark ">Get in Touch</h5>
+        <p class="mb-2 text-dark "> <i class="bi bi-geo-alt"></i>123 Street, CDO</p>
+
+        <p class="mb-2 text-dark "><i class="bi bi-telephone"></i>+63123-456-789</p>
+        <p class="mb-2 text-dark "><i class="bi bi-envelope"></i> <span>contact@lucidhomes.com</span> </p>
+
+
+        <div class="flex pt-2">
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-facebook me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"> <i class="bi bi-twitter me-1 "></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-youtube me-1"></i></a>
+          <a href="#" class="btn2 btn-outline-light  btn-social"><i class="bi bi-linkedin me-1"></i></a>
+        </div>
+      </div>
+      <div class="letter-box col-lg-3 p-6">
+        <h5 class="mb-3 text-dark ">Newsletter</h5>
+        <p class="mb-2 text-dark "> Subscribe and get daily, weekly and monthly newsletter from us!</p>
+
+
+
+        <div class="position-relative mx-auto" style="max-width: 400px;">
+          <input type="text" class="form-relative text-dark bg-transparent w-100 py-3 ps-4 pe-5"
+            placeholder="Your Email">
+          <button class="btn  px-2 position-absolute  top-0 end-0 mt-2 mx-2" type="button">SignUp</button>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="footer-bg">
+      <h6 class=" text-center  text-white p-3 m-0">Copyright 2023| All Right Reserved</h6>
+    </div>
+  </div>
+  <script src="../js/search.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="search.js"></script>
+
+<!---CAROSEL-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+
+</html>
